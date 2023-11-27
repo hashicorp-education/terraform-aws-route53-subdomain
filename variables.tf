@@ -7,13 +7,13 @@ variable "gh_token" {
   description = "Github token with permissions to create and delete repos."
 }
 
-variable "waypoint_project" {
+variable "waypoint_application" {
   type        = string
   description = "Name of the Waypoint project."
 
   validation {
-    condition     = !contains(["-", "_"], var.waypoint_project)
-    error_message = "waypoint_project must not contain dashes or underscores."
+    condition     = !contains(["-", "_"], var.waypoint_application)
+    error_message = "waypoint_application must not contain dashes or underscores."
   }
 }
 
